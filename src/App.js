@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import axios from "axios";
+import { async } from 'q';
+
 //import PropTypes from "prop-types";
 
 class App extends Component {
@@ -7,14 +10,13 @@ class App extends Component {
     movies: []
   }
   
+  getMovies = async () => {
+    const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json");
+  };
   
   componentDidMount(){
-    setTimeout(() => {
-      this.setState({ isLoading: false });
-    }, 6000);
+    this.getMovies();
   }
-
-
 
 
   render(){
