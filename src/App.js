@@ -7,14 +7,30 @@ class App extends Component {
   };
 
   add = () => {
-    console.log("add");
+    this.setState(current => ({ count: current.count + 1 }));
   }
 
   minus = () => {
-    console.log("minus");
+    this.setState(current => ({ count: current.count - 1 }));
   }
 
+  componentDidMount(){
+    console.log("componentDidMount");
+  }
+
+  componentDidUpdate(){
+    console.log("componentDidUpdate");
+  }
+
+  componentWillUnmount(){
+    console.log("componentWillUnmount");
+  }
+
+
+
+
   render(){
+    console.log("I'm rendering ");
     return(
       <div>
         <h1>The number is : {this.state.count}</h1>
