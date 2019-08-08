@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import Movie from "./Movie";
-import "./App.css";
-import "./Movie.css";
+import Movie from "../Movie";
+import "../App.css";
+import "../Movie.css";
+import Router from "./Router";
+import Header from "./Header";
+
 
 //import PropTypes from "prop-types";
 
